@@ -1,0 +1,10 @@
+1. Tokenize the text
+2. Convert tokens to input ids (or token ids)
+   via Byte Pair Encoding, SentencePiece, tiktoken,etc.
+3. Add special context tokens (<|UNK|>,<|BOS|>,<|EOS|>,<|PAD|>)
+4. Use a sliding window to chunk the input into overlapping sequences of max_length
+   output input ids and corresponding target ids
+5. Embed the tokens in a continuous vector representation using an embedding layer
+6. Create positional embeddings
+7. Input to LLM = token embedding + positional embedding
+
